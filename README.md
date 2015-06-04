@@ -40,11 +40,11 @@ $ sbt
 
 ## Developing
 ### Background
-Spark packages are Maven modules published to a repository like any other module.  
+A Spark Package is a Maven artifact published to a Maven repository like normal.  The associated JAR file is *not* an uber-jar; Spark automatically downloads the dependencies as needed.
 
-The Spark Packages website is a repository that compliments Maven Central with different publishing rules and procedures.  The main difference is in how provenance is handled.  Your module's coordinates must exactly match the code's corresponding github location.  
+The Spark Packages website is a repository that compliments Maven Central with different publishing rules and procedures.  The main difference is in how provenance is handled.  Your artifact's coordinates must exactly match the code's corresponding github location.  
 
-Of course, your module's dependencies may originate from any repository known to spark-submit.
+Of course, your artifact's dependencies may originate from any repository known to spark-submit.
 
 ### Working with Snapshots
 It is not possible to publish a package that refers to unpublished artifacts.  To make use of a dependency in your local repository (such as `org.deeplearning4j:dl4j-spark-ml`), update the build script to use the dependency, then publish the package to the local Maven repository.
