@@ -5,7 +5,7 @@
 ### Goals
 - Interactive use of DL4J in Spark Shell and Spark Notebook
 ```
-> $SPARK_HOME/bin/spark-shell --packages deeplearning4j:dl4j-spark-ml:0.0.3.3.5.alpha2
+> $SPARK_HOME/bin/spark-shell --packages deeplearning4j:dl4j-spark-ml:0.4-rc0
 ```
 
 ### More Information
