@@ -32,3 +32,10 @@ sparkComponents ++= Seq("sql", "mllib")
 
 // add any Spark Package dependencies using spDependencies.
 //spDependencies += "databricks/spark-avro:1.0.0"
+
+spShortDescription := "Deep Learning for Spark ML"
+
+spDescription := """Based on the deeplearning4j library, dl4j-spark-ml provides distributed deep-learning algorithms for
+                    classification and reconstruction with Spark ML.   Also provides DataFrame readers for MNIST, 
+                    Labeled Faces in the Wild (LFW) and IRIS.
+                    """.stripMargin
