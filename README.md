@@ -1,19 +1,39 @@
 # Spark Package - dl4j-spark-ml
 
 ## Introduction
+Welcome to the dl4j-spark-ml project!   dl4j-spark-ml is a Spark Package for the deeplearning4j library.  The package is published to spark-packages.org ([here](http://spark-packages.org/package/deeplearning4j/dl4j-spark-ml)).
+
+The deeplearning4j library provides the following types of neural nets:
+ - Restricted Boltzmann machines
+ - Convolutional Nets (images)
+ - Recurrent Nets/LSTMs (time series and sensor data)
+ - Recursive autoencoders
+ - Deep-belief networks
+ - Deep Autoencoders (QA/data compression)
+ - Recursive Neural Tensor Networks (scenes, parsing)
+ - Stacked Denoising Autoencoders
+
+The library provides the following Spark components:
+ - DataFrame Readers
+   - MNIST
+   - Labeled Faces in the Wild (LFW)
+   - IRIS
+ - Pipeline Components
+   - NeuralNetworkClassification
+   - NeuralNetworkReconstruction
+
+See the [README](https://github.com/deeplearning4j/deeplearning4j/blob/master/deeplearning4j-scaleout/spark/dl4j-spark-ml/README.md) file in deeplearning4j's repository for more details.
 
 ### Goals
-- Interactive use of DL4J in Spark Shell and Spark Notebook
+- Interactive use of deeplearning4j in Spark Shell and Spark Notebook
+- Full integration with Spark ML pipeline
+- Interoperability with data sources and other pipeline components
 ```
-> $SPARK_HOME/bin/spark-shell --packages deeplearning4j:dl4j-spark-ml:0.0.3.3.5.alpha2
+> $SPARK_HOME/bin/spark-shell --packages deeplearning4j:dl4j-spark-ml:0.4-rc0
 ```
-
-### More Information
-Background information on Spark Packages:
-- [Announcing Spark Packages](https://databricks.com/blog/2014/12/22/announcing-spark-packages.html)
-- [Publishing Instructions](http://spark-packages.org/artifact-help)
 
 ## Publishing
+_This section describes how to to publish the Spark Package._
 
 The project uses the [sbt-spark-package](https://github.com/databricks/sbt-spark-package) plugin, which provides the 'spPublish' task.
 
@@ -28,6 +48,10 @@ password=(Github Personal Access Token)
 
 ### Update version info
 Update the version information in `build.sbt`.  Update dependencies as necessary.
+
+### Register
+_This task is performed once to register the package at spark-packages.org.   It (probably) may be used to update the package description._
+Run the `spRegister` task.
 
 ### Publish
 Run the `spPublish` task.
@@ -59,3 +83,8 @@ Keep in mind that the dl4j build script publishes only to local-maven-cache; the
 Some relevant snippets:
 - [spark/core/src/main/scala/org/apache/spark/deploy/SparkSubmit.scala::resolveMavenCoordinates](https://github.com/apache/spark/blob/branch-1.4/core/src/main/scala/org/apache/spark/deploy/SparkSubmit.scala#L914)
 - [sbt-spark-package/src/main/scala/sbtsparkpackage/SparkPackagePlugin.scala](https://github.com/databricks/sbt-spark-package/blob/master/src/main/scala/sbtsparkpackage/SparkPackagePlugin.scala)
+
+### More Information
+Background information on Spark Packages:
+- [Announcing Spark Packages](https://databricks.com/blog/2014/12/22/announcing-spark-packages.html)
+- [Publishing Instructions](http://spark-packages.org/artifact-help)
