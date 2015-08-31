@@ -32,6 +32,9 @@ See the [README](https://github.com/deeplearning4j/deeplearning4j/blob/master/de
 > $SPARK_HOME/bin/spark-shell --packages deeplearning4j:dl4j-spark-ml:0.4-rc0
 ```
 
+### Example Code
+See the example code in the [dl4j-spark-ml-examples](https://github.com/deeplearning4j/dl4j-spark-ml-examples) repository.
+
 ## Publishing
 _This section describes how to to publish the Spark Package._
 
