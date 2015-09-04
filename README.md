@@ -1,5 +1,7 @@
 # Spark Package - dl4j-spark-ml
 
+[![Join the chat at https://gitter.im/deeplearning4j/dl4j-spark-ml](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/deeplearning4j/dl4j-spark-ml?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## Introduction
 Welcome to the dl4j-spark-ml project!   dl4j-spark-ml is a Spark Package for the deeplearning4j library.  The package is published to spark-packages.org ([here](http://spark-packages.org/package/deeplearning4j/dl4j-spark-ml)).
 
