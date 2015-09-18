@@ -2,7 +2,7 @@
 // http://www.scala-sbt.org/0.13/docs/index.html
 name := "dl4j-spark-ml"
 organization := "deeplearning4j"
-version := "0.4-rc2.2"
+version := "0.4-rc3.1"
 
 // Scala
 scalaVersion := "2.10.4"
@@ -14,9 +14,9 @@ resolvers += Resolver.mavenLocal
 // DL4J
 libraryDependencies ++= Seq(
     "org.deeplearning4j" % "dl4j-spark-ml" % "0.4-rc2.2",
-    "org.nd4j" % "nd4j-x86" % "0.4-rc2.2" exclude("com.github.fommil.netlib", "all"),
-    "org.nd4j" % "nd4j-api" % "0.4-rc2.2" exclude("com.github.fommil.netlib", "all"),
-    "org.nd4j" % "nd4j-bytebuddy" % "0.4-rc2.2" exclude("com.github.fommil.netlib", "all")
+    "org.nd4j" % "nd4j-x86" % "0.4-rc3.1" exclude("com.github.fommil.netlib", "all"),
+    "org.nd4j" % "nd4j-api" % "0.4-rc3.1" exclude("com.github.fommil.netlib", "all"),
+    "org.nd4j" % "nd4j-bytebuddy" % "0.4-rc3.1" exclude("com.github.fommil.netlib", "all")
 )
 
 // Spark Packaging
