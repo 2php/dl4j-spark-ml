@@ -2,7 +2,7 @@
 // http://www.scala-sbt.org/0.13/docs/index.html
 name := "dl4j-spark-ml"
 organization := "deeplearning4j"
-version := "0.4-rc2.2"
+version := "0.4-rc3.1"
 
 // Scala
 scalaVersion := "2.10.4"
