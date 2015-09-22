@@ -31,7 +31,7 @@ See the [README](https://github.com/deeplearning4j/deeplearning4j/blob/master/de
 - Full integration with Spark ML pipeline
 - Interoperability with data sources and other pipeline components
 ```
-> $SPARK_HOME/bin/spark-shell --packages deeplearning4j:dl4j-spark-ml:0.4-rc0
+> $SPARK_HOME/bin/spark-shell --packages deeplearning4j:dl4j-spark-ml:0.4-rc3.1
 ```
 
 ### Example Code
