@@ -2,7 +2,7 @@
 // http://www.scala-sbt.org/0.13/docs/index.html
 name := "dl4j-spark-ml"
 organization := "deeplearning4j"
-version := "0.4-rc3.2"
+version := "0.4-rc4.2-SNAPSHOT"
 
 // Scala
 scalaVersion := "2.10.4"
@@ -11,12 +11,24 @@ crossPaths := false  // suppress the scala version number suffix on artifacts
 // Resolvers
 resolvers += Resolver.mavenLocal
 
+val imageIoVersion = "3.1.1"
+val nd4jVersion = "0.4-rc4.2-SNAPSHOT"
+val twelveMonkeysGroup = "com.twelvemonkeys.imageio"
+
+val canovaVersion = "0.0.0.9-SNAPSHOT"
+val nd4jGroup = "org.nd4j"
+
 // DL4J
 libraryDependencies ++= Seq(
-    "org.deeplearning4j" % "dl4j-spark-ml" % "0.4-rc3.2",
-    "org.nd4j" % "nd4j-x86" % "0.4-rc3.2" exclude("com.github.fommil.netlib", "all"),
-    "org.nd4j" % "nd4j-api" % "0.4-rc3.2" exclude("com.github.fommil.netlib", "all"),
-    "org.nd4j" % "nd4j-bytebuddy" % "0.4-rc3.2" exclude("com.github.fommil.netlib", "all")
+  "org.deeplearning4j" % "dl4j-spark-ml" % nd4jVersion,
+  twelveMonkeysGroup % "imageio-jpeg" % imageIoVersion,
+  twelveMonkeysGroup % "imageio-tiff" % imageIoVersion,
+  twelveMonkeysGroup % "imageio-psd" % imageIoVersion,
+  twelveMonkeysGroup % "imageio-bmp" % imageIoVersion,
+  nd4jGroup % "nd4j-x86" % nd4jVersion exclude("com.github.fommil.netlib", "all"),
+  nd4jGroup  % "nd4j-api" % nd4jVersion exclude("com.github.fommil.netlib", "all"),
+  nd4jGroup % "nd4j-bytebuddy" % nd4jVersion exclude("com.github.fommil.netlib", "all")
+
 )
 
 // Spark Packaging
@@ -40,4 +52,4 @@ spShortDescription := "Deep Learning for Spark ML"
 spDescription := """Based on the deeplearning4j library, dl4j-spark-ml provides distributed deep-learning algorithms for
                     classification and reconstruction with Spark ML.   Also provides DataFrame readers for MNIST, 
                     Labeled Faces in the Wild (LFW) and IRIS.
-                    """.stripMargin
+                 """.stripMargin
