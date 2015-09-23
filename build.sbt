@@ -2,7 +2,7 @@
 // http://www.scala-sbt.org/0.13/docs/index.html
 name := "dl4j-spark-ml"
 organization := "deeplearning4j"
-version := "0.4-rc4.2-SNAPSHOT"
+version := "0.4-rc3.3"
 
 // Scala
 scalaVersion := "2.10.4"
@@ -12,10 +12,10 @@ crossPaths := false  // suppress the scala version number suffix on artifacts
 resolvers += Resolver.mavenLocal
 
 val imageIoVersion = "3.1.1"
-val nd4jVersion = "0.4-rc4.2-SNAPSHOT"
+val nd4jVersion = "0.4-rc3.3"
 val twelveMonkeysGroup = "com.twelvemonkeys.imageio"
 
-val canovaVersion = "0.0.0.9-SNAPSHOT"
+val canovaVersion = "0.0.0.9"
 val nd4jGroup = "org.nd4j"
 
 // DL4J
