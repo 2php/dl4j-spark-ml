@@ -2,7 +2,7 @@
 // http://www.scala-sbt.org/0.13/docs/index.html
 name := "dl4j-spark-ml"
 organization := "deeplearning4j"
-version := "0.4-rc3.3"
+version := "0.4-rc3.4-SNAPSHOT"
 
 // Scala
 scalaVersion := "2.10.4"
@@ -12,22 +12,15 @@ crossPaths := false  // suppress the scala version number suffix on artifacts
 resolvers += Resolver.mavenLocal
 
 val imageIoVersion = "3.1.1"
-val nd4jVersion = "0.4-rc3.3"
-val twelveMonkeysGroup = "com.twelvemonkeys.imageio"
-
-val canovaVersion = "0.0.0.9"
-val nd4jGroup = "org.nd4j"
+val dl4jVersion = "0.4-rc3.4-SNAPSHOT"
+val nd4jVersion = "0.4-rc3.4"
 
 // DL4J
 libraryDependencies ++= Seq(
-  "org.deeplearning4j" % "dl4j-spark-ml" % nd4jVersion,
-  twelveMonkeysGroup % "imageio-jpeg" % imageIoVersion,
-  twelveMonkeysGroup % "imageio-tiff" % imageIoVersion,
-  twelveMonkeysGroup % "imageio-psd" % imageIoVersion,
-  twelveMonkeysGroup % "imageio-bmp" % imageIoVersion,
-  nd4jGroup % "nd4j-x86" % nd4jVersion exclude("com.github.fommil.netlib", "all"),
-  nd4jGroup  % "nd4j-api" % nd4jVersion exclude("com.github.fommil.netlib", "all"),
-  nd4jGroup % "nd4j-bytebuddy" % nd4jVersion exclude("com.github.fommil.netlib", "all")
+  "org.deeplearning4j" % "dl4j-spark-ml" % dl4jVersion,
+  "org.nd4j" % "nd4j-x86" % nd4jVersion exclude("com.github.fommil.netlib", "all"),
+  "org.nd4j" % "nd4j-api" % nd4jVersion exclude("com.github.fommil.netlib", "all"),
+  "org.nd4j" % "nd4j-bytebuddy" % nd4jVersion exclude("com.github.fommil.netlib", "all")
 
 )
 
