@@ -12,8 +12,8 @@ crossPaths := false  // suppress the scala version number suffix on artifacts
 resolvers += Resolver.mavenLocal
 
 val imageIoVersion = "3.1.1"
-val dl4jVersion = "0.4-rc3.4-SNAPSHOT"
-val nd4jVersion = "0.4-rc3.4"
+val dl4jVersion = "0.4-rc3.4"
+val nd4jVersion = "0.4-rc3.5"
 
 // DL4J
 libraryDependencies ++= Seq(
