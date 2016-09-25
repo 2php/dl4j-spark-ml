@@ -1,5 +1,8 @@
 # Spark Package - dl4j-spark-ml
 
+THIS HAS BEEN ABANDONED. PLEASE USE OUR EXISTING SPARK IMPLEMENTATION IN THE NORMAL PROJECT:
+http://deeplearning4j.org/spark
+
 [![Join the chat at https://gitter.im/deeplearning4j/dl4j-spark-ml](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/deeplearning4j/dl4j-spark-ml?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## Introduction
